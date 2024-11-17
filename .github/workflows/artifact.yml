@@ -32,7 +32,7 @@ jobs:
         path: ./artifacts/
 
     - name: Check dest dir
-      run: ls -al .
+      run: ls -al ./artifacts/
 
     - name: Display artifact content
       run: cat ./artifacts/hello.txt
