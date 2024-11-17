@@ -24,12 +24,15 @@ jobs:
     needs: build
     steps:
     - name: Create destination dir
-      run: mkdir ./artifacts
+      run: mkdir ./artifacts/
 
     - name: Download archive text file
       uses: actions/download-artifact@v4
       with:
         path: ./artifacts/
+
+    - name: Check dest dir
+      run: ls -al .
 
     - name: Display artifact content
       run: cat ./artifacts/hello.txt
