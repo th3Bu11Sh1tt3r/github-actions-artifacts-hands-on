@@ -30,6 +30,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         path: ./artifacts/
+        name: hello.txt
 
     - name: Check dest dir
       run: ls -al ./artifacts/
